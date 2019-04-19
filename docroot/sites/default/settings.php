@@ -746,9 +746,9 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * example.org, with all subdomains included.
  */
 $settings['trusted_host_patterns'] = array(
-	'^ems\.dev\.zilleem\.com',
-	'^ems\.stg\.zilleem\.com',
-	'^ems\.zilleem\.com',
+	'^lds\.dev\.zilleem\.com',
+	'^lds\.stg\.zilleem\.com',
+	'^lds\.zilleem\.com',
 	'^dev\.emsrecruiting\.org',
 	'^www\.emsrecruiting\.org',
 	'^drupal8dev-ems-917784472\.us-east-1\.elb\.amazonaws\.com',
@@ -816,9 +816,9 @@ $settings['hash_salt'] = 'UngqEOh6UXxNjFenILVJAsoA89SxuPBOTP5drDe3wQE';
 // ];
 
 // Validate we are on PROD.
-if (isset($_SERVER['SERVER_NAME']) && !empty($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] == 'www.emsrecruiting.org')) {
+if (isset($_SERVER['SERVER_NAME']) && !empty($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] == 'www.ldc.org')) {
   $databases['default']['default'] = array(
-    'database' => 'drupal8_ems',
+    'database' => 'drupal8_ldc',
     'username' => 'drupal8_zilleem',
     'password' => '58JgTVMaGxDxmB%5',
     'host' => 'mysql-drupal8-zilleem-cluster.cluster-ctwpwgjbfbok.us-east-1.rds.amazonaws.com',
@@ -832,7 +832,7 @@ if (isset($_SERVER['SERVER_NAME']) && !empty($_SERVER['SERVER_NAME']) && ($_SERV
 }
 if (isset($_SERVER['SERVER_NAME']) && !empty($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] == 'drupal8ems-104788593.us-east-1.elb.amazonaws.com')) {
   $databases['default']['default'] = array(
-    'database' => 'drupal8_ems',
+    'database' => 'drupal8_ldc',
     'username' => 'drupal8_zilleem',
     'password' => '58JgTVMaGxDxmB%5',
     'host' => 'mysql-drupal8-zilleem-cluster.cluster-ctwpwgjbfbok.us-east-1.rds.amazonaws.com',
@@ -844,14 +844,14 @@ if (isset($_SERVER['SERVER_NAME']) && !empty($_SERVER['SERVER_NAME']) && ($_SERV
   $config['cdn.settings']['status'] = FALSE;
   $settings['slack_notification'] = FALSE;
 }
-elseif (isset($_SERVER['SERVER_NAME']) && !empty($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] == 'ems.stg.zilleem.com')) {
+elseif (isset($_SERVER['SERVER_NAME']) && !empty($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] == 'ldc.stg.zilleem.com')) {
   $config['google_analytics.settings']['account'] = '';
   $config['cdn.settings']['status'] = FALSE;
   $settings['slack_notification'] = FALSE;
 }
 else {
   $databases['default']['default'] = array(
-    'database' => 'drupal8_ems_dev',
+    'database' => 'drupal8_ldc_dev',
     'username' => 'drupal8_zilleem',
     'password' => '58JgTVMaGxDxmB%5',
     'host' => 'mysql-drupal8-zilleem-cluster.cluster-ctwpwgjbfbok.us-east-1.rds.amazonaws.com',
