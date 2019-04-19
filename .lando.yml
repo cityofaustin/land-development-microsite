@@ -1,0 +1,30 @@
+---
+name: ldc
+recipe: drupal8
+config:
+  webroot: docroot
+  drush: 8.1.18
+  php: 7.1
+
+proxy:
+  mailhog:
+    - mail.ldc.lndo.site
+
+# add in some custom event scripting
+events:
+  post-db-import:
+    - appserver: /app/lando/tooling/post-db-import.sh
+
+# add additional auxiliary services
+services:
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+  appserver:
+    run:
+      - /app/lando/tooling/build.sh
+tooling:
+  pull:
+    service: appserver
+    cmd: /app/lando/scripts/pull.sh
