@@ -1,0 +1,65 @@
+# Ignore configuration files that may contain sensitive information.
+private_files
+
+# Ignore paths that contain user-generated content.
+.sass-cache
+docroot/files
+docroot/private
+docroot/sites/*/files
+docroot/sites/*/private
+docroot/sites/default/settings.local.php
+docroot/sites/default/database.local.php
+docroot/sites/development.services.yaml
+
+# Ignore NetBeans settings
+docroot/nbproject
+docroot/nbproject/*
+
+# Ignore development settings
+config-dev
+config/local
+
+# User-defined ignores
+#.htaccess
+*.sql
+*.sql.gz
+*.mysql
+*.bak
+*.ignore
+*.tar
+*.gz
+
+# OS Files
+typescript
+.vagrant/
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+~*
+*~
+#.*
+!.gitignore
+
+# IDE files
+.project
+.komodoproject
+.kpf
+*.esproj
+.espressostorage
+*.tmproj
+*.tmproject
+tmtags
+*.sublime-workspace
+.idea/
+
+# Theme files
+node_modules
+package-lock.json
