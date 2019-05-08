@@ -746,13 +746,11 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * example.org, with all subdomains included.
  */
 $settings['trusted_host_patterns'] = array(
-	'^lds\.dev\.zilleem\.com',
-	'^lds\.stg\.zilleem\.com',
-	'^lds\.zilleem\.com',
-	'^dev\.emsrecruiting\.org',
-	'^www\.emsrecruiting\.org',
-	'^drupal8dev-ems-917784472\.us-east-1\.elb\.amazonaws\.com',
-	'^drupal8ems-104788593.us-east-1.elb.amazonaws.com'
+	'^ldc\.dev\.zilleem\.com',
+	'^ldc\.stg\.zilleem\.com',
+	'^ldc\.zilleem\.com',
+	'^drupal8dev-ldc-917784472\.us-east-1\.elb\.amazonaws\.com',
+	'^drupal8ldc-104788593.us-east-1.elb.amazonaws.com'
 );
 /**
  * The default list of directories that will be ignored by Drupal's file API.
