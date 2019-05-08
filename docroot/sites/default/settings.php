@@ -749,8 +749,7 @@ $settings['trusted_host_patterns'] = array(
 	'^ldc\.dev\.zilleem\.com',
 	'^ldc\.stg\.zilleem\.com',
 	'^ldc\.zilleem\.com',
-	'^drupal8dev-ldc-917784472\.us-east-1\.elb\.amazonaws\.com',
-	'^drupal8ldc-104788593.us-east-1.elb.amazonaws.com'
+	'^drupal8dev-ldc-368925270\.us-east-1\.elb\.amazonaws\.com'
 );
 /**
  * The default list of directories that will be ignored by Drupal's file API.
